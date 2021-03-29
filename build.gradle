@@ -1,0 +1,42 @@
+/**
+ * External dependencies for the build script
+ * @see http://www.gradle.org/docs/current/userguide/userguide_single.html#sec:external_dependencies
+ */
+
+
+println "in root build.gradle"
+
+def localName = "123"
+
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'commons-codec:commons-codec:1.2'
+    }
+}
+
+def methodName() { 
+   println "12345"
+}
+
+
+
+description ="""
+Example project for a Gradle build
+
+Project name: ${project.name}
+
+More detailed information here... """
+
+task hello{
+	methodName()
+	doLast{
+		println "${localName}"
+		println 'Hello'
+		methodName()
+	}
+}
+

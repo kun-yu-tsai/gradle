@@ -1,0 +1,24 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.3.21'
+}
+
+compileKotlin{
+	println "12345"
+}
+
+task hello{
+	group = "ggg"
+	println "123232"
+	doLast{
+		println "doLast"
+	}
+}
+
+
+task hello2{
+	group = "AAAA"
+	println "AAAAAAAA"
+	doLast{
+		println "doLast hello2"
+	}
+}
